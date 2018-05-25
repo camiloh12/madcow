@@ -12,7 +12,9 @@ public class ExerciseTest {
     public void testSets() {
         Calculation calculation = new Calculation();
         BigDecimal lastSetWeight = new BigDecimal("175.0");
-        Exercise exercise = new Exercise(calculation, lastSetWeight);
+        Exercise exercise = new Exercise(ExerciseType.SQUAT, calculation, lastSetWeight);
+
+        assertEquals(ExerciseType.SQUAT, exercise.getType());
         assertEquals(new BigDecimal("90.0"), exercise.getSet(1));
         assertEquals(new BigDecimal("110.0"), exercise.getSet(2));
         assertEquals(new BigDecimal("130.0"), exercise.getSet(3));
