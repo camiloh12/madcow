@@ -12,6 +12,7 @@
         tools:context="com.blackbeltlabs.madcow.MainActivity">
 
     <TextView
+            android:id="@+id/greeting"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:text="@string/hello"
